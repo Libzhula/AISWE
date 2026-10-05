@@ -223,7 +223,7 @@ $ python tests/validate_submission.py
 | --- | --- | --- | --- |
 | `check_requirements.py` | 23 | 0 | 0 |
 
-Commit these numbers were produced at (`git rev-parse --short HEAD`): to be updated after final commit
+Commit these numbers were produced at (`git rev-parse --short HEAD`): 9b01f8d
 
 **Every FAIL, one line each: what it is and what you decided to do about it.** No FAIL or ERROR results.
 

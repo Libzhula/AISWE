@@ -18,7 +18,7 @@ checker:
   pass: 23
   fail: 0
   error: 0
-  commit: pending
+  commit: 9b01f8d
 
 assumptions:
   overlap_touching_bookings: allowed
