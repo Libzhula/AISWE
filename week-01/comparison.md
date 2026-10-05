@@ -10,11 +10,11 @@
 
 | | Manual (Part 1) | Rocket (Part 2) |
 | --- | --- | --- |
-| Language / stack used | Python console script | |
+| Language / stack used | Python console script | Next.js / TypeScript / Tailwind CSS web app |
 | Time to first version that ran | TODO: add your real time | |
 | Time to all 4 test cases passing | TODO: add your real time | |
-| Number of attempts / prompts needed | 1 manual script, formatting fixed after testing | |
-| Lines of code you actually wrote | 24 | |
+| Number of attempts / prompts needed | 1 manual script, formatting fixed after testing | Initial prompt + 1 clarification answer so far |
+| Lines of code you actually wrote | 24 | 0 manually; Rocket generated a multi-file web app |
 | Did it handle invalid marks (case B)? | Yes | |
 | Did it handle an empty list (case D)? | Yes | |
 | Did it use the ≥ 50 pass threshold? | Yes | |
@@ -35,14 +35,17 @@
 <!-- Tech stack, UI, extra features, a pass threshold it invented, styling, etc. -->
 
 -
--
+- Next.js, TypeScript and Tailwind CSS stack
+- Full web dashboard layout with charts, grade breakdown, pass/fail donut, sortable table and bulk paste
+- Student names, median, standard deviation and configurable pass threshold
 
 ## 4. What the AI got wrong or silently skipped
 
 <!-- Be concrete: input, expected, actual. -->
 
 -
--
+- It made the solution much larger than the requested small program.
+- Exact outputs for the four required comma-separated test cases still need final checking in the Rocket preview.
 
 ## 5. The defect I asked Rocket to fix
 
