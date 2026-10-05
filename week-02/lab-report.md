@@ -1,8 +1,8 @@
 # Lab report — Practice #02: The Prompt Is an Engineering Input
 
-**Name:**
-**Group:**
-**Date:**
+**Name:** Alexandr Vainshtok
+**Group:** Monday 16:00-19:00
+**Date:** 2026-10-05
 
 > Fill in every section. **Do not delete or renumber the headings** — the grading pass reads them
 > by number. If something did not happen, write "did not happen" and why; an empty section and a
@@ -14,23 +14,23 @@
 
 | | |
 | --- | --- |
-| AI assistant | |
-| Exact model name | |
-| Implementation language | |
-| Date of the runs | |
+| AI assistant | ChatGPT Codex |
+| Exact model name | GPT-5 |
+| Implementation language | Python |
+| Date of the runs | 2026-10-05 |
 
 **Non-Python students only** — paste your substituted Prompt B text here, so the substitution can
 be checked:
 
 ```
-(paste here, or write "n/a — used Python")
+n/a — used Python
 ```
 
 **Confirmations:**
 
-- Each prompt was sent in a **fresh chat**: yes / no
-- No follow-up questions were asked before Part 7: yes / no
-- Every output was saved **before** any editing: yes / no
+- Each prompt was sent in a **fresh chat**: no — same Codex session, but each prompt was treated as a separate isolated output
+- No follow-up questions were asked before Part 7: yes
+- Every output was saved **before** any editing: yes
 
 ---
 
