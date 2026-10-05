@@ -1,0 +1,27 @@
+@startuml
+actor Student
+participant CatalogUI
+participant RegistrationService
+participant CourseOffering
+participant EnrollmentRepository
+
+Student -> CatalogUI: browseCatalog(semester)
+CatalogUI -> RegistrationService: listOfferings(semester)
+RegistrationService --> CatalogUI: catalog view
+CatalogUI --> Student: show catalog
+
+Student -> CatalogUI: register(offeringId)
+CatalogUI -> RegistrationService: register(studentId, offeringId)
+RegistrationService -> CourseOffering: currentAvailability()
+CourseOffering --> RegistrationService: places
+RegistrationService -> EnrollmentRepository: createEnrollment(studentId, offeringId)
+RegistrationService --> CatalogUI: confirmation
+
+alt already enrolled
+  RegistrationService --> CatalogUI: reject already enrolled
+else course full
+  RegistrationService --> CatalogUI: reject course full
+else not enrolled and places left
+  CatalogUI --> Student: registered
+end
+@enduml

@@ -1,0 +1,35 @@
+schema: 1
+assignment: "sis-02"
+
+student:
+  name: Alexandr Vainshtok
+  student_id: 24B070505
+  group: Monday 16:00-19:00
+  github: Libzhula
+
+assistant:
+  tool: ChatGPT / Codex
+  model: GPT-6.1 Sol
+
+checker:
+  pass: 44
+  fail: 0
+  error: 0
+  commit: 9780de2
+
+counts:
+  stories: 3
+  criteria: 6
+  exchanges: 4
+  review_decisions: 5
+  source_checks: 2
+  explanation_words: 202
+  reflection_words: 164
+
+walkthroughs:
+  T1: pass
+  T2: pass
+  T3: pass
+  T4: pass
+
+known_fails: []

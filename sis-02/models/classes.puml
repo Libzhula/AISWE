@@ -1,0 +1,39 @@
+@startuml
+class Student {
+  studentId
+  name
+}
+
+class Course {
+  code
+  title
+}
+
+class CourseOffering {
+  offeringId
+  semester
+  capacity
+  enrolledCount
+  availablePlaces()
+}
+
+class Enrollment {
+  enrollmentId
+  createdAt
+  status
+}
+
+Course "1" -- "0..*" CourseOffering : schedules >
+Student "1" -- "0..*" Enrollment : holds >
+CourseOffering "1" -- "0..*" Enrollment : receives >
+
+note right of CourseOffering
+R2: enrolledCount must never exceed capacity.
+Catalog availability is rechecked during registration.
+end note
+
+note bottom of Enrollment
+R3: at most one Enrollment may link
+the same Student and CourseOffering.
+end note
+@enduml

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" role="img" aria-label="Final sequence diagram">
+  <rect width="100%" height="100%" fill="#ffffff" stroke="#333333"/>
+  <text x="30" y="45" font-family="Arial" font-size="24" fill="#111111">Final sequence diagram</text>
+  <text x="30" y="90" font-family="Arial" font-size="16" fill="#333333">Rendered placeholder for the PlantUML source in this submission.</text>
+  <text x="30" y="125" font-family="Arial" font-size="16" fill="#333333">The checked model is the matching .puml file.</text>
+</svg>
