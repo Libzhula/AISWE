@@ -1,0 +1,23 @@
+@startuml
+start
+:Student requests room booking;
+
+if (Future start and duration > 0 and <= 2 hours? (R1)) then ([yes])
+  if (Room blocked? (R3)) then ([no])
+    if (Overlapping active booking exists? (R2)) then ([no])
+      :Create booking;
+      :Send confirmation (R4);
+      stop
+    else ([yes])
+      :Reject booking because room is unavailable;
+      stop
+    endif
+  else ([yes])
+    :Reject booking because room is blocked;
+    stop
+  endif
+else ([no])
+  :Reject booking because time range is invalid;
+  stop
+endif
+@enduml

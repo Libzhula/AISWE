@@ -1,0 +1,11 @@
+@startuml
+start
+:Student requests booking;
+:Create booking;
+if (All rules valid?) then (yes)
+  :Send confirmation;
+else (no)
+  :Reject request;
+endif
+stop
+@enduml
