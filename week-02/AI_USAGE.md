@@ -10,17 +10,17 @@ accuracy, testing and integrity of everything you submit, including everything a
 | --- | --- |
 | Assistant | ChatGPT Codex |
 | Exact model name | GPT-5 |
-| Plan (free / paid) | paid |
+| Plan (free / paid) | not shown in Codex CLI |
 | Dates of the four runs | 2026-10-05 |
 
 ## 2. What it produced
 
 | Prompt | File it produced | Edited by me afterwards? |
 | --- | --- | --- |
-| A | `week-02/code/prompt_a.*` | no / yes — say what |
-| B | `week-02/code/prompt_b.*` | no / yes — say what |
-| C | `week-02/code/prompt_c.*` | no / yes — say what |
-| D | `week-02/code/prompt_d.*` | no / yes — say what |
+| A | `week-02/code/prompt_a.py` | no |
+| B | `week-02/code/prompt_b.py` | no |
+| C | `week-02/code/prompt_c.py` | no |
+| D | `week-02/code/prompt_d.py` | no |
 
 > The four files must be the **unedited** responses. If you repaired one before testing, say so
 > here. An edited output that is declared costs a fraction of a point; an edited output that is
@@ -42,6 +42,8 @@ Writing your own text with an AI is permitted at Level D **and must be declared 
 
 **Anything I accepted from the AI without fully understanding it:**
 <!-- Name the file and the part. This is a normal answer. -->
+
+Nothing major. Prompt C includes simple test functions and Prompt D includes a short docstring; I can explain the validation and calculation logic.
 
 Signed: Alexandr Vainshtok
 Date: 2026-10-05
