@@ -11,8 +11,8 @@
 | | Manual (Part 1) | Rocket (Part 2) |
 | --- | --- | --- |
 | Language / stack used | Python console script | Next.js / TypeScript / Tailwind CSS web app |
-| Time to first version that ran | TODO: add your real time | |
-| Time to all 4 test cases passing | TODO: add your real time | |
+| Time to first version that ran | Not separately recorded | |
+| Time to all 4 test cases passing | 17 minutes | |
 | Number of attempts / prompts needed | 1 manual script, formatting fixed after testing | Initial prompt + 1 clarification answer so far |
 | Lines of code you actually wrote | 24 | 0 manually; Rocket generated a multi-file web app |
 | Did it handle invalid marks (case B)? | Yes | |
