@@ -54,21 +54,29 @@ The original prompt did not ask for a web UI, charts, grading categories, studen
 
 ## Preview / published link
 
-TODO: add the Rocket preview or published link if available. Screenshots are saved in `week-01/ai/screenshots/`.
+No exported source code or public link was added to the repository. Evidence is saved as screenshots in `week-01/ai/screenshots/`.
 
 ## Test results
 
 | Case | Input | Rocket output | Matches spec? | Notes |
 | --- | --- | --- | --- | --- |
-| A | `85, 23, 45, 90, 92` | TODO: test in Rocket preview | TODO | Required output: avg 67.00, high 92, low 23, pass 60.0% |
-| B | `88, 47, -5, 101, abc, 73, 50, , 100` | TODO: test in Rocket preview | TODO | Screenshots show individual validation rejects `-1`, `101`, `abc`, and empty score input, but the full comma-list case still needs to be tested. |
-| C | `10, 20, 30` | TODO: test in Rocket preview | TODO | Required output: avg 20.00, high 30, low 10, pass 0.0% |
-| D | `abc, , xyz` | TODO: test in Rocket preview | TODO | Screenshots show individual validation rejects text and empty score input; full no-valid-list case still needs to be tested. |
+| A | `85, 23, 45, 90, 92` | Not captured in final screenshot set | Not verified | Required output: avg 67.00, high 92, low 23, pass 60.0%. |
+| B | `88, 47, -5, 101, abc, 73, 50, , 100` | Not captured as one full case. Individual screenshots show `-1`, `101`, `abc`, and empty score are rejected by validation. | Partly verified | Rocket validates invalid values instead of silently ignoring them like the manual spec requires. |
+| C | `10, 20, 30` | average 20.00, highest 30.00, lowest 10.00, pass rate 0.0%, 0/3 passed | Yes | This matches the required statistics, with extra dashboard fields added. |
+| D | `abc, , xyz` | Bulk paste reports parse errors for `abc` and `xyz` and imports 0 marks. | Partly | It does not crash, but it shows validation errors instead of the manual program's simple "No valid marks entered" message. |
 
 ## Defect-fix prompt
 
-TODO: choose one real defect after testing the four cases in Rocket.
+```text
+plz make it such i dont have to add names all the time, just marks are fine too
+```
+
+Follow-up prompt:
+
+```text
+bulk paste too plz
+```
 
 ## Defect-fix result
 
-TODO: record whether the fix worked, partly worked, or broke something else.
+Rocket fixed this. It made the student name field optional, auto-assigned names like "Student 1", and updated bulk paste so score-only lines such as `10`, `20`, `30` could be imported.
