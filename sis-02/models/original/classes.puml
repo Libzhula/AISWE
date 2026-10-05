@@ -1,0 +1,31 @@
+@startuml
+class Student {
+  studentId
+  name
+}
+
+class Course {
+  code
+  title
+}
+
+class CourseOffering {
+  offeringId
+  semester
+  capacity
+  enrolledCount
+}
+
+class Enrollment {
+  enrollmentId
+  createdAt
+  status
+}
+
+class Payment
+
+Student "1" -- "0..*" Enrollment
+CourseOffering "1" -- "0..*" Enrollment
+Course "1" -- "0..*" CourseOffering
+Payment "1" -- "0..*" Enrollment
+@enduml

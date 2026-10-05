@@ -1,3 +1,38 @@
-' SIS #02 — your FINAL sequence diagram goes here, as PlantUML (@startuml … @enduml).
-' Start from the AI's original in models/original/sequence.puml, apply your accepted review
-' decisions, then render it to models/img/sequence.png (or .svg). README section 5.
+@startuml
+actor Student
+participant CatalogUI
+participant RegistrationService
+participant CourseOffering
+participant EnrollmentRepository
+
+Student -> CatalogUI: browseCatalog(semester)
+CatalogUI -> RegistrationService: listOfferings(semester)
+RegistrationService -> CourseOffering: getCatalogData()
+CourseOffering --> RegistrationService: code, title, offering, availablePlaces
+RegistrationService --> CatalogUI: catalog view
+CatalogUI --> Student: show catalog
+
+Student -> CatalogUI: register(offeringId)
+CatalogUI -> RegistrationService: register(studentId, offeringId)
+
+group atomic final registration check
+RegistrationService -> EnrollmentRepository: findEnrollment(studentId, offeringId)
+EnrollmentRepository --> RegistrationService: duplicate?
+RegistrationService -> CourseOffering: currentAvailability()
+CourseOffering --> RegistrationService: enrolledCount, capacity
+
+alt [already enrolled]
+  RegistrationService --> CatalogUI: reject already enrolled
+  CatalogUI --> Student: explain already enrolled
+else [course full]
+  RegistrationService --> CatalogUI: reject course full
+  CatalogUI --> Student: explain course full
+else [not enrolled and places left]
+  RegistrationService -> EnrollmentRepository: createEnrollment(studentId, offeringId)
+  EnrollmentRepository --> RegistrationService: enrollment
+  RegistrationService -> CourseOffering: updateAvailability()
+  RegistrationService --> CatalogUI: confirmation(enrollment)
+  CatalogUI --> Student: show confirmation
+end
+end
+@enduml
