@@ -20,7 +20,7 @@ checker:
   pass: 35
   fail: 0
   error: 0
-  commit: pending
+  commit: 0ae7349
   kept_fails: []
 
 assumptions:
