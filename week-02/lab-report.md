@@ -88,25 +88,28 @@ no external libraries. Return code plus a short explanation.
 **What I appended to Prompt B:**
 
 ```
-
+Example: analyze_marks([40, 60, 80], 50) → average 60, highest 80, lowest 40,
+pass_rate 66.67. Include tests for: one mark, decimals, custom pass_mark, empty list,
+text value, and marks below 0 or above 100. State any remaining assumptions before
+the code.
 ```
 
 **Tests the AI wrote for itself** — how many, and which situations do they cover?
 
 | Situation | Covered by the AI's tests? |
 | --- | --- |
-| one mark | |
-| decimals | |
-| custom pass_mark | |
-| empty list | |
-| text value | |
-| below 0 / above 100 | |
+| one mark | yes |
+| decimals | yes |
+| custom pass_mark | yes |
+| empty list | yes |
+| text value | yes |
+| below 0 / above 100 | yes |
 
-**Do the AI's own tests pass against the AI's own code?** yes / no
+**Do the AI's own tests pass against the AI's own code?** yes
 
-**Do they agree with the harness in section 6?** yes / no — if no, where do they disagree:
+**Do they agree with the harness in section 6?** yes
 
-**Assumptions C stated explicitly before the code:**
+**Assumptions C stated explicitly before the code:** marks must be a non-empty list of int/float values; marks must be from 0 to 100 inclusive; a mark equal to pass_mark passes; pass_rate is rounded to two decimals.
 
 ---
 
@@ -115,16 +118,38 @@ no external libraries. Return code plus a short explanation.
 **The complete prompt I wrote** (one message, sent to a fresh chat):
 
 ```
+You are a Python developer. Implement analyze_marks(marks, pass_mark=50).
 
+Return a dictionary with exactly these keys: average, highest, lowest, pass_rate.
+Accept only a non-empty list of numeric int or float marks from 0 to 100 inclusive.
+Raise ValueError for an empty list, any non-numeric value, or any out-of-range mark.
+Use no external libraries.
+
+Passing means mark >= pass_mark, so a mark exactly equal to pass_mark passes.
+Calculate pass_rate as passing marks / total marks * 100 and round it to two decimals,
+so analyze_marks([40, 60, 80], 50) returns pass_rate 66.67.
+
+Example: analyze_marks([40, 60, 80], 50) should return:
+{"average": 60.0, "highest": 80, "lowest": 40, "pass_rate": 66.67}
+
+Also ensure these cases work:
+- one mark
+- decimal marks
+- custom pass_mark
+- empty list raises ValueError
+- text value raises ValueError
+- marks below 0 or above 100 raise ValueError
+
+Return only the Python code.
 ```
 
 **What I deliberately added that A, B and C did not have:**
 
-1.
-2.
-3.
+1. I explicitly said that equality counts as passing: `mark >= pass_mark`.
+2. I resolved the pass_rate ambiguity by asking for rounding to two decimals.
+3. I required exact dictionary keys and ValueError behavior for all invalid cases.
 
-**The ambiguity I found in the specification, and how I resolved it inside Prompt D:**
+**The ambiguity I found in the specification, and how I resolved it inside Prompt D:** The worked example says `66.67`, while plain division gives `66.666666...`. I resolved this by asking D to round pass_rate to two decimals. I also stated that a mark exactly equal to the pass mark counts as passing.
 
 ---
 
