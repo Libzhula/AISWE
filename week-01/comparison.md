@@ -1,8 +1,8 @@
 # Week 01 — Manual vs AI: Comparison
 
-**Name:**
-**Group:**
-**Date:**
+**Name:** Alexandr Vainshtok
+**Group:** Monday 16:00-19:00
+**Date:** 2026-10-05
 
 ---
 

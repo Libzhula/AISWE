@@ -7,7 +7,7 @@ including anything an AI tool produced.
 | Tool | Version / plan | Used for | Which files it touched |
 | --- | --- | --- | --- |
 | Rocket (rocket.new) | free | Part 2 — generated app from a prompt | `week-01/ai/` |
-| | | | |
+| ChatGPT Codex | GPT-5 | Repository setup, planning, template scaffolding | `README.md`, `.gitignore`, `week-01/manual/README.md`, `week-01/ai/prompts.md`, `week-01/comparison.md`, `week-01/AI_USAGE.md` |
 
 **Part 1 (`week-01/manual/`) was written without any AI assistance:** yes / no
 <!-- If "no", say exactly what was assisted. An honest "no" costs far less than an undisclosed "yes". -->
@@ -17,5 +17,5 @@ including anything an AI tool produced.
 **Anything I accepted from the AI without fully understanding it:**
 <!-- Name the file and the part. This is a normal, expected answer in Week 1. -->
 
-Signed: <your name>
-Date:
+Signed: Alexandr Vainshtok
+Date: 2026-10-05
