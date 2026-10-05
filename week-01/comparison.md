@@ -10,25 +10,25 @@
 
 | | Manual (Part 1) | Rocket (Part 2) |
 | --- | --- | --- |
-| Language / stack used | | |
-| Time to first version that ran | | |
-| Time to all 4 test cases passing | | |
-| Number of attempts / prompts needed | | |
-| Lines of code you actually wrote | | |
-| Did it handle invalid marks (case B)? | | |
-| Did it handle an empty list (case D)? | | |
-| Did it use the ≥ 50 pass threshold? | | |
-| Output format matches the spec? | | |
-| Can you explain every line of it? | | |
+| Language / stack used | Python console script | |
+| Time to first version that ran | TODO: add your real time | |
+| Time to all 4 test cases passing | TODO: add your real time | |
+| Number of attempts / prompts needed | 1 manual script, formatting fixed after testing | |
+| Lines of code you actually wrote | 24 | |
+| Did it handle invalid marks (case B)? | Yes | |
+| Did it handle an empty list (case D)? | Yes | |
+| Did it use the ≥ 50 pass threshold? | Yes | |
+| Output format matches the spec? | Yes after formatting fix | |
+| Can you explain every line of it? | Yes | |
 
 ## 2. Test results
 
 | Case | Input | Manual output | Rocket output | Spec says | Match? |
 | --- | --- | --- | --- | --- | --- |
-| A | `85, 23, 45, 90, 92` | | | avg 67.00 · high 92 · low 23 · pass 60.0% | |
-| B | `88, 47, -5, 101, abc, 73, 50, , 100` | | | avg 71.60 · high 100 · low 47 · pass 80.0% | |
-| C | `10, 20, 30` | | | avg 20.00 · high 30 · low 10 · pass 0.0% | |
-| D | `abc, , xyz` | | | clear message, no crash | |
+| A | `85, 23, 45, 90, 92` | valid 5 · avg 67.00 · high 92 · low 23 · pass 60.0% | | avg 67.00 · high 92 · low 23 · pass 60.0% | Yes |
+| B | `88, 47, -5, 101, abc, 73, 50, , 100` | valid 5 · avg 71.60 · high 100 · low 47 · pass 80.0% | | avg 71.60 · high 100 · low 47 · pass 80.0% | Yes |
+| C | `10, 20, 30` | valid 3 · avg 20.00 · high 30 · low 10 · pass 0.0% | | avg 20.00 · high 30 · low 10 · pass 0.0% | Yes |
+| D | `abc, , xyz` | No valid marks entered. | | clear message, no crash | Yes |
 
 ## 3. What the AI added that I never asked for
 
