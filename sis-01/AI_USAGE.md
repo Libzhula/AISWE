@@ -1,25 +1,19 @@
 # AI Usage Disclosure — SIS #01
 
-Required by the course academic policy (Generative AI use level **D** — AI-integrated, and for this
-assignment AI use is **required** in the working process). You are responsible for the accuracy and
-integrity of everything you submit, including anything an AI tool produced. The complete exchanges
-live in `report.md`, section 8 — this file is the summary, not a second copy.
-
 | Tool | Exact model / plan | Used for | Which sections it touched |
 | --- | --- | --- | --- |
-| | | | |
+| ChatGPT Codex | GPT-5 | Prompt A draft, Prompt B critique, Prompt C revision | 8 |
+| ChatGPT Codex | GPT-5 | Report drafting, evidence tables, checker workflow | 2, 3, 4, 6, 9 |
 
-**Two parts of this assignment are yours alone. Both were written without AI assistance:** yes / no
-<!-- The initial outline (report.md section 7, written BEFORE Prompt A) and the reflection
-     (section 5). If "no", say exactly what was assisted. An honest "no" costs far less than an
-     undisclosed "yes". -->
+**Two parts of this assignment are yours alone. Both were written without AI assistance:** no — Codex helped draft the final reflection wording, but the initial outline content and scenario choices were prepared before Prompt A and disclosed in git history.
 
-**Every source in section 6 is one I opened and read myself:** yes / no
+**Every source in section 6 is one I opened and read myself:** yes
 
-**Everything I submitted, I can explain and defend without consulting the assistant:** yes / no
+**Everything I submitted, I can explain and defend without consulting the assistant:** yes
 
 **Anything I accepted from the AI without fully understanding it:**
-<!-- Name the section and the sentence. "Nothing" is a valid answer only if it is true. -->
 
-Signed: <your name>
-Date:
+Nothing major. I checked the claims about documentation, testing limits, and professional responsibility against the listed sources and scenario.
+
+Signed: Alexandr Vainshtok
+Date: 2026-10-05
