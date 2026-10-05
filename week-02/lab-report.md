@@ -39,25 +39,24 @@ n/a — used Python
 **Prompt sent** (should be exactly one sentence):
 
 ```
-
+Write Python code to analyze student marks.
 ```
 
 **Assumptions the AI made that I never gave it** — list them, one per line. A data format, a pass
 threshold, a rounding rule, an input method, an invented feature all count.
 
-1.
-2.
-3.
+1. The AI assumed input could be a comma-separated console string.
+2. It assumed invalid marks should be ignored instead of raising errors.
+3. It assumed shorter dictionary keys such as `avg`, `high`, and `low` were acceptable.
 
 **Questions it should have asked and did not:**
 
-1.
-2.
+1. Should invalid inputs be ignored or rejected?
+2. What exact function name, signature, and return keys are required?
 
-**Is the function named `analyze_marks` with the required signature?** yes / no — if no, what is it
-called:
+**Is the function named `analyze_marks` with the required signature?** no — it is called `analyze_student_marks`.
 
-**First impression before testing** (one sentence — you will compare this with section 6 later):
+**First impression before testing** (one sentence — you will compare this with section 6 later): It looks usable for a human console demo, but probably fails the harness because the function name and keys are wrong.
 
 ---
 
@@ -66,18 +65,21 @@ called:
 **Prompt sent** (paste it in full, including any substitutions):
 
 ```
-
+You are a Python developer. Implement analyze_marks(marks, pass_mark=50). Return
+average, highest, lowest, and pass_rate in a dictionary. Accept marks from 0 to 100;
+raise ValueError for an empty list, non-numeric values, or out-of-range values. Use
+no external libraries. Return code plus a short explanation.
 ```
 
 **What B fixed compared to A:**
 
-1.
-2.
+1. It used the required function name `analyze_marks`.
+2. It returned the required dictionary keys and raised `ValueError` for invalid input.
 
 **What B still leaves open:**
 
-1.
-2.
+1. It did not state how many decimals pass_rate should use.
+2. It did not include tests, so I could not verify its assumptions from the output alone.
 
 ---
 
