@@ -1,0 +1,23 @@
+@startuml
+class Student {
+  studentId
+  name
+}
+
+class Room {
+  roomId
+  capacity
+}
+
+class Booking {
+  bookingId
+  startTime
+  endTime
+}
+
+class BookingService
+
+Student "1" -- "1..*" Booking
+Room "1" *-- "1..*" Booking
+BookingService -- Booking
+@enduml
